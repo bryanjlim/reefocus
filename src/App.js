@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import './App.css';
+import {SignIn} from './components/pages/signIn/signIn'; 
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      isSignedIn: false,
+    }
+
     const config = {
       apiKey: "AIzaSyDG6I5-16WszdcXaLgb3IGTBab1zJmbFCU",
       authDomain: "reefocus-app.firebaseapp.com",
@@ -13,7 +19,7 @@ class App extends Component {
       storageBucket: "reefocus-app.appspot.com",
       messagingSenderId: "567857954394"
     };
-    firebase.initializeApp(config);
+    //firebase.initializeApp(config);
 
     this.signIn = this.signIn.bind(this);
   }
@@ -37,6 +43,8 @@ class App extends Component {
       const credential = error.credential;
       
       console.log(errorCode + errorMessage + email + credential);
+
+      this.setState({isSignedIn: true});
     });
   }
 
@@ -44,7 +52,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <button onClick={this.signIn}>Sign In</button>
+          {this.state.isSignedIn ? <h1>Your Are Signed In</h1> : <SignIn signIn={this.signIn}/>}
+          
         </header>
       </div>
     );
