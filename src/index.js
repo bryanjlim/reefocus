@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
-import { App } from './components/app'
-import { NotFound404 } from './components/pages/not_found_404/notFound404'
+import * as serviceWorker from './serviceWorker';
+import { App } from './App'
+import { NotFound404 } from './components/pages/404/404'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import './index.css';
 
 ReactDOM.render(
     <Router>
@@ -14,4 +13,4 @@ ReactDOM.render(
         </Switch>
     </Router>, document.getElementById('root')
 );
-registerServiceWorker();
+serviceWorker.unregister();
