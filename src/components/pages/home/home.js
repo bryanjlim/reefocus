@@ -6,7 +6,7 @@ export class Home extends Component {
             <div>
                 <div className="container">
                     <h1 className="">Reefocus</h1>
-
+                    
                 </div>
             </div>
         );

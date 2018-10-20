@@ -3,16 +3,13 @@ import { Link, NavLink } from 'react-router-dom';
 
 export const HomeNav = () =>
     <nav className="homeNav">
-        <Link to="/">
-            LOGO HERE
-        </Link>
+        <NavLink to="/store">
+            Store
+        </NavLink>
         <NavLink exact to="/">
-            Get Started
+            Your Aquarium
         </NavLink>
-        <NavLink to="/aboutus">
-            About Us
-        </NavLink>
-        <NavLink to="/contact">
-            Contact
+        <NavLink to="/leaderboard">
+            Leaderboard
         </NavLink>
     </nav>
