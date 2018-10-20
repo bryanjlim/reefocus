@@ -19,7 +19,7 @@ export class App extends Component {
       storageBucket: "reefocus-app.appspot.com",
       messagingSenderId: "567857954394"
     };
-    //firebase.initializeApp(config);
+    firebase.initializeApp(config);
 
     this.signIn = this.signIn.bind(this);
   }
