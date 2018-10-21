@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="36.62mm"
+   height="36.185mm"
+   version="1.1"
+   viewBox="0 0 36.62 36.185"
+   id="svg1269"
+   sodipodi:docname="icon_actions.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="730"
+     inkscape:window-height="480"
+     id="namedview1271"
+     showgrid="false"
+     inkscape:zoom="1.7256229"
+     inkscape:cx="69.203148"
+     inkscape:cy="68.381105"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1269" />
+  <defs
+     id="defs1247">
+    <linearGradient
+       id="linearGradient1779-2"
+       x1="-54.261"
+       x2="-39.468"
+       y1="-.47024"
+       y2="-.47024"
+       gradientTransform="translate(-104.86 46.515)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#fff"
+         offset="0"
+         id="stop1244" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata1249">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-70.014 -116.12)"
+     id="g1267">
+    <g
+       id="g1263">
+      <rect
+         x="81.641"
+         y="115.52"
+         width=".16536"
+         height=".066146"
+         fill="#67ad9e"
+         style="paint-order:markers fill stroke"
+         id="rect1251" />
+      <rect
+         x="70.014"
+         y="115.69"
+         width="36.62"
+         height="36.62"
+         ry="0"
+         fill="#de6b33"
+         style="paint-order:stroke fill markers"
+         id="rect1253" />
+      <rect
+         transform="matrix(-.79264 -.60969 -.60969 .79264 0 0)"
+         x="-159.21"
+         y="50.934"
+         width="14.792"
+         height="17.034"
+         ry="2.9576"
+         fill="#f5f0e7"
+         style="paint-order:markers fill stroke"
+         id="rect1255" />
+      <rect
+         transform="matrix(-.79264 -.60969 -.60969 .79264 0 0)"
+         x="-159.12"
+         y="40.414"
+         width="14.792"
+         height="11.262"
+         ry="3.0837"
+         fill="url(#linearGradient1779-2)"
+         style="paint-order:markers fill stroke"
+         id="rect1257" />
+      <rect
+         transform="matrix(-.79264 -.60969 -.60969 .79264 0 0)"
+         x="-155.73"
+         y="36.442"
+         width="7.7787"
+         height="3.3122"
+         ry="1.0288"
+         fill="#fff"
+         style="paint-order:markers fill stroke"
+         id="rect1259" />
+      <rect
+         transform="matrix(-.79264 -.60969 -.60969 .79264 0 0)"
+         x="-155.73"
+         y="37.646"
+         width="7.7787"
+         height="2.1078"
+         ry="0"
+         fill="#f5f0e7"
+         style="paint-order:markers fill stroke"
+         id="rect1261" />
+    </g>
+    <path
+       d="m72.674 151.56h27.627c1.7657 0 3.1873-1.5368 3.1873-3.4458v-30.638c-4.8443 5.4668-22.46 24.257-30.814 34.084z"
+       fill="#de6b33"
+       fill-opacity=".19608"
+       style="paint-order:markers fill stroke"
+       id="path1265" />
+  </g>
+</svg>
