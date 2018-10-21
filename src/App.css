@@ -66,6 +66,7 @@
   position:absolute;
   width: 25%;
   height: 25%;
-  top: 50%;
-  left: 50%;
+  top: 75%;
+  left: 15%;
+  transform: translate(-50%, -50%);
 }
