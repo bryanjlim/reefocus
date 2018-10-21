@@ -6,13 +6,25 @@ import PlasticMenu from "./PlasticMenu.js"
 import TransportMenu from "./transport-menu"
 import logImg from "../../graphics/icon_plus.svg"
 import minusImg from "../../graphics/icon_minus.svg"
+import { Events } from '../pages/mainapp/events'
 
 
 export class MainMenu extends Component {
     
     constructor(props) {
        super(props);
-       this.state = {current: "default"};
+       this.state = {
+           current: "default",
+           showEventsDialog: false,
+        };
+
+        this.closeEventsDialog = this.closeEventsDialog.bind(this);
+   }
+
+   closeEventsDialog() {
+       this.setState({
+           showEventsDialog: false,
+       })
    }
 
     render() {
@@ -53,7 +65,7 @@ export class MainMenu extends Component {
                     alt = "Eco Events"
                     height = "75vh"
                     width = "75vh"
-                    onClick = {() => {this.setState({current: "Events"});}}
+                    onClick = {() => {this.setState({current: "Events", showEventsDialog: true});}}
                 />
             </div>
         )
@@ -86,15 +98,16 @@ export class MainMenu extends Component {
             // Events page popup
             return (
                 <div>
-                 <h1> "No events today. Check back later!" </h1>
-                 <img
-                    className = "Log" 
-                    src = {logImg}
-                    alt = "Log"
-                    onClick = {() => this.setState({current: "main"})}
-                /> 
-            </div>
-            )
+                    <Events open={this.state.showEventsDialog} close={this.closeEventsDialog} 
+                            userData={this.props.userData} updateFirestore={this.props.updateFirestore}/>
+                    <img
+                        className = "Log" 
+                        src = {logImg}
+                        alt = "Log"
+                        onClick = {() => this.setState({current: "main"})}
+                    /> 
+                </div>
+            );
         }
     }   
 }
