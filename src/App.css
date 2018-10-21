@@ -42,7 +42,7 @@
   }
 }
 .scrollContain{
-  position:absolute;
+  position:fixed;
   width:100%;
   overflow: hidden;
   height:100%;
@@ -76,10 +76,8 @@
   text-align: center;
 }
 
-.navbar {
-  position: fixed;
-  bottom: 0px;
-  width: auto;
-  margin: auto;
-  text-align: center;
+.nav{
+  position:fixed;
+  bottom:0px;
+  width:100%;
 }
