@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="594.15" height="271.35" version="1.1" viewBox="0 0 157.2 71.795" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <radialGradient id="radialGradient10238" cx="-441.71" cy="183.57" r="47.7" gradientTransform="matrix(1.6919 -.0099285 .0044314 .75516 1013.3 134.17)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ad4d08" offset="0"/>
+   <stop stop-color="#f0a11a" stop-opacity=".99608" offset="1"/>
+  </radialGradient>
+  <linearGradient id="linearGradient10170" x1="-423.8" x2="-425.4" y1="218.68" y2="250.45" gradientTransform="matrix(1.1424 0 0 1.1424 774.48 44.369)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ceda93" offset="0"/>
+   <stop stop-color="#f2f5cb" stop-opacity=".99608" offset=".5265"/>
+   <stop stop-color="#d5e971" stop-opacity=".99608" offset="1"/>
+  </linearGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-197.82 -275.21)">
+  <path d="m339.14 293.24c9.3521 0.49336 15.794 4.8454 15.937 11.692 0.1472 0.72739-0.23019 0.46292-0.8791 0.77026 0.66092 5.9132-14.061 9.4802-20.263 9.598-5.173 0.0983-5.6643-1.4266-10.838-1.4815-4.4844-0.0475-16.957 4.0802-12.554 3.5129 7.7071-0.99301 8.1869 17.071-1.5609 23.106-5.7042 3.5317-9.7146 5.7096-19.906 6.4697-8.3546 0.62307-28.273-1.5441-27.595-7.329 3.0595-0.17447 28.638-7.6126 35.417-12.61 6.5976-4.8632 4.7616-6.5986 4.359-6.4905-16.035 4.3061-43.863-1.2121-64.67-6.9837-4.0786 10.892-18.759 11.322-20.344 10.856-0.57268-0.16847-21.778-4.189-17.954-8.2435 4.6693-4.9503 27.697-5.6678 27.041-5.8696-2.1877-0.67242-1.5943-0.58873-3.4725-1.2124-8.5635-2.8436-2.511-2.9153-5.0731-5.2845 5.2968-17.703 41.433-24.074 64.131-23.226 13.29 0.49649 32.226 8.7766 41.316 14.643 5.5121 1.1876 11.413-3.1697 16.91-1.9174z" fill="url(#linearGradient10170)"/>
+  <path d="m323.91 305.53c-6.8596-0.41243-6.8483 3.4475-13.565 4.8995-20.535 4.4392-68.568 1.3307-88.155-6.2673-8.4125-3.2634-10.884-4.5306-13.325-7.0235 16.778-8.0034 33.549-21.954 65.295-21.928 13.249 1.1528 38.065 9.4161 46.854 15.724 6.3832 6.4717 6.6925 3.7294 2.8969 14.595z" fill="url(#radialGradient10238)"/>
+  <path d="m339.95 304.53c0 1.9589-1.4097 0.47036-3.3686 0.47039-1.9589-3e-5 -3.7253 1.4885-3.7253-0.47039 0-1.9589 1.588-3.547 3.547-3.547 1.9589 0 3.5469 1.588 3.5469 3.547z" fill="#120c07" fill-opacity=".95814" style="paint-order:normal"/>
+ </g>
+</svg>
