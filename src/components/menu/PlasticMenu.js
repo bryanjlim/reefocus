@@ -9,6 +9,26 @@ function alertDecision(action, points) {
 }
 
 export class PlasticMenu extends Component {
+    bringOwnBottle() {
+        this.props.userData.bringWaterBottleCount++;
+        this.props.updateFirestore();
+    }
+
+    refuseExtraPackaging() {
+        this.props.userData.refuseExtraPackagingCount++;
+        this.props.updateFirestore();
+    }
+
+    bringOwnBag() {
+        this.props.userData.bringOwnBagCount++;
+        this.props.updateFirestore();
+    }
+
+    bringCompostableObject() {
+        this.props.userData.bringCompostableObjectCount++;
+        this.props.updateFirestore();
+    }
+
     render() {
         return (
             <div className = "PlasticMenu">

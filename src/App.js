@@ -73,7 +73,7 @@ export class App extends Component {
             }
            
           </header>
-          <Navbar location={this.props.location.pathname} />
+          <Navbar location={this.props.location.pathname} userData={userDataStore} updateFirestore={this.updateCounts}/>
         </div>
         
       );

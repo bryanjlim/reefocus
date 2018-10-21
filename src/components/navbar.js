@@ -33,7 +33,7 @@ export class Navbar extends React.Component {
                     <BottomNavigationAction icon={<Home />} value="/" label="Reef" component={Link} to="/" />
                     <BottomNavigationAction icon={<ShoppingCart />} value="/store" label="Shop" component={Link} to="/store" />
                 </BottomNavigation>
-                <MainMenu />
+                <MainMenu userData={this.props.userData} updateFirestore={this.props.updateFirestore}/>
             </div>
         );
     }

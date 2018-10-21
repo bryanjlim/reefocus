@@ -60,7 +60,7 @@ export class MainMenu extends Component {
         }  else if (this.state.current == "Plastic" ){
             return (
                 <div>
-                    <PlasticMenu />
+                    <PlasticMenu userData={this.props.userData} updateFirestore={this.props.updateFirestore}/>
                     <img
                     className = "Minus" 
                     src = {minusImg}
@@ -72,7 +72,7 @@ export class MainMenu extends Component {
         }  else if (this.state.current == "Transport"){
             return (
                 <div>
-                    <TransportMenu />
+                    <TransportMenu userData={this.props.userData} updateFirestore={this.props.updateFirestore}/>
                     <img
                         className = "Minus" 
                         src = {minusImg}
