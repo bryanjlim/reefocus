@@ -14,6 +14,16 @@ export class Info extends Component {
                     <Card className="reuseInfoCard">
                         <CardContent>
                             <Typography variant="h5" component="h2">
+                                Your Reef
+                            </Typography>
+                            <Typography component="p">
+                                Points: {this.props.userData.points}
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                    <Card className="reuseInfoCard">
+                        <CardContent>
+                            <Typography variant="h5" component="h2">
                                 Reuse
                             </Typography>
                             <Typography component="p">
