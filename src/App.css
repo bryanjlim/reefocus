@@ -45,14 +45,15 @@
 .mainContainer {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 93%;
+  bottom: 7%;
   overflow: hidden;
 }
 
 .background {
   position: absolute;
   margin: auto;
-  height: 100%;
+  height: 125%;
   display: block;
 }
 

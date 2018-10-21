@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Background from '../../../graphics/reefocus background 1.2.svg';
+import Background from '../../../graphics/reefocus background 1.3.jpg';
 import FanCoral from '../../../graphics/fan coral 1.2.svg';
 import PinkCoral from '../../../graphics/fan coral 0.2.svg';
 import Starfish from '../../../graphics/starfish 1.1.svg';
