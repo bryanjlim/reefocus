@@ -6,7 +6,6 @@ import Starfish from '../../../graphics/starfish 1.1.svg';
 import BrainCoral from '../../../graphics/brain coral 0.2.svg';
 import SeaSponge from '../../../graphics/seasponge 0.1.svg';
 import Seaweed from '../../../graphics/seaweed 0.1.svg';
-import SnackbarMaker from '../../snackbar.js'
 export class Home extends Component {
     constructor(props) {
         super(props);

@@ -3,30 +3,81 @@ import BagImg from "../../graphics/icon_bag.svg";
 import CupImg from "../../graphics/icon_bottle.svg";
 import KnifeImg from "../../graphics/icon_fork.svg";
 import RefuseImg from "../../graphics/icon_packaging.svg";
-
-function alertDecision(action, points) {
-    alert(action + ": +" + points);
-}
+import SnackBarMaker from '../snackbar';
 
 export class PlasticMenu extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showSnackbar: false,
+            message: "",
+        }
+
+        this.bringOwnBottle = this.bringOwnBottle.bind(this);
+        this.refuseExtraPackaging = this.refuseExtraPackaging.bind(this);
+        this.bringOwnBag = this.bringOwnBag.bind(this);
+        this.bringCompostableObject = this.bringCompostableObject.bind(this);
+    }
+
     bringOwnBottle() {
         this.props.userData.bringWaterBottleCount++;
+        this.props.userData.points += 10;
         this.props.updateFirestore();
+
+        this.setState({
+            showSnackbar: false,
+        });
+
+        this.setState({
+            showSnackbar: true,
+            message: "Good job reusing a bottle! You've gained 10 points"
+        });
     }
 
     refuseExtraPackaging() {
         this.props.userData.refuseExtraPackagingCount++;
+        this.props.userData.points += 10;
         this.props.updateFirestore();
+
+        this.setState({
+            showSnackbar: false,
+        });
+
+        this.setState({
+            showSnackbar: true,
+            message: "Good job reusing packaging! You've gained 10 points"
+        });
     }
 
     bringOwnBag() {
         this.props.userData.bringOwnBagCount++;
+        this.props.userData.points += 10;
         this.props.updateFirestore();
+
+        this.setState({
+            showSnackbar: false,
+        });
+
+        this.setState({
+            showSnackbar: true,
+            message: "Good job bringing your own bag! You've gained 10 points"
+        });
     }
 
     bringCompostableObject() {
         this.props.userData.bringCompostableObjectCount++;
+        this.props.userData.points += 10;
         this.props.updateFirestore();
+
+        this.setState({
+            showSnackbar: false,
+        });
+
+        this.setState({
+            showSnackbar: true,
+            message: "Good job using non-plastic cutlery! You've gained 10 points"
+        });
     }
 
     render() {
@@ -35,25 +86,26 @@ export class PlasticMenu extends Component {
                 <img className = "Bag"
                     src = {BagImg}
                     alt = "Bring your own bag"
-                    onClick = {() => alertDecision("Bring your own bag", 10)}
+                    onClick = {() => this.bringOwnBag()}
                     
                 />
                 <img className = "Cup"
                     src = {CupImg}
                     alt = "Bring your own cup/bottle"
-                    onClick = {() => alertDecision("Bring your own cup/bottle", 10)}
+                    onClick = {() => this.bringOwnBottle()}
                 />
                 <img className = "Knife"
                     src = {KnifeImg}
                     alt = "Use non-plastic cutlery"
-                    onClick = {() => alertDecision("Use non-plastic cutlery", 10)}
+                    onClick = {() => this.bringCompostableObject()}
                 />
                 <img className = "Refuse"
                     src = {RefuseImg}
                     alt = "Refuse extra packaging"
-                    onClick = {() => alertDecision("Refuse extra packaging", 10)}
+                    onClick = {() => this.refuseExtraPackaging()}
                 />
 
+                {this.state.showSnackbar ? <SnackBarMaker open={this.state.showSnackbar} message={this.state.message} /> : null}
             </div>
 
         )

@@ -24,12 +24,12 @@ class SnackbarMaker extends React.Component {
         <div>
         <Snackbar
           anchorOrigin={{ vertical:"top", horizontal:"center" }}
-          open={open}
+          open={this.props.open}
           onClose={this.handleClose}
           ContentProps={{
             'aria-describedby': 'message-id',
           }}
-          message={<span id="message-id">{this.state.message}</span>}
+          message={<span id="message-id">{this.props.message}</span>}
           action={[
             <IconButton
               key="close"
