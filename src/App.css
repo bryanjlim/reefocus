@@ -30,3 +30,23 @@
     transform: rotate(360deg);
   }
 }
+@keyframes App-Scroll-Down{
+  
+}
+.container{
+  position: absolute;
+  width:100%;
+  top:0px;
+  left:0px;
+  animation:App-Scroll-Down;
+  animation-delay: 1s;
+
+}
+.AppName{
+  margin:20px;
+  top:150px;
+  text-align: center;
+}
+
+
+

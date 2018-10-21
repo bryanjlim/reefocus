@@ -5,7 +5,7 @@ export class Home extends Component {
         return (
             <div>
                 <div className="container">
-                    <h1 className="">Reefocus</h1>
+                    <h1 className="AppName">Reefocus</h1>
                     
                 </div>
             </div>

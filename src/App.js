@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import './App.css';
-import {SignIn} from './components/pages/signIn/signIn'; 
-
+import { SignIn } from './components/pages/signIn/signIn';
+import { Home } from './components/pages/home/home';
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -27,13 +27,13 @@ export class App extends Component {
   signIn() {
     const provider = new firebase.auth.GoogleAuthProvider();
 
-    firebase.auth().signInWithPopup(provider).then(function(result) {
+    firebase.auth().signInWithPopup(provider).then(function (result) {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
       // ...
-    }).catch(function(error) {
+    }).catch(function (error) {
       // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -41,10 +41,10 @@ export class App extends Component {
       const email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       const credential = error.credential;
-      
+
       console.log(errorCode + errorMessage + email + credential);
 
-      this.setState({isSignedIn: true});
+      this.setState({ isSignedIn: true });
     });
   }
 
@@ -52,8 +52,8 @@ export class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          {this.state.isSignedIn ? <h1>Your Are Signed In</h1> : <SignIn signIn={this.signIn}/>}
-          
+          {this.state.isSignedIn ? <Home /> : <SignIn signIn={this.signIn} />}
+
         </header>
       </div>
     );
