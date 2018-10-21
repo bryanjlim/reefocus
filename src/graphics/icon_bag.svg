@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="36.62mm" height="36.02mm" version="1.1" viewBox="0 0 36.62 36.02" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <linearGradient id="linearGradient1771" gradientTransform="matrix(.059933 0 0 .11181 -47.438 -49.792)" osb:paint="solid">
+   <stop stop-color="#f5f0e7" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient1777" gradientTransform="matrix(.0052202 0 0 .0009542 101.44 48.517)" osb:paint="solid">
+   <stop stop-color="#fff" offset="0"/>
+  </linearGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-37.342 -76.755)">
+  <rect x="37.342" y="76.155" width="36.62" height="36.62" rx="0" ry="0" fill="#d75e23" style="paint-order:stroke fill markers"/>
+  <rect transform="matrix(-.0035939 -.99999 -1 .0023361 0 0)" x="-106.14" y="-69.649" width="20.215" height="28.872" rx="0" ry="3.2663" fill="url(#linearGradient1777)" style="paint-order:markers fill stroke"/>
+  <path d="m49.267 88.234v-6.6773h12.406v7.3864" fill="none" stroke="url(#linearGradient1771)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5319" style="paint-order:normal"/>
+  <g>
+   <rect transform="matrix(-.0078451 -.99997 -1 .0010702 0 0)" x="-95.103" y="-69.284" width="9.2608" height="28.872" rx="0" ry="0" fill="url(#linearGradient1777)" style="paint-order:markers fill stroke"/>
+   <rect transform="matrix(-.0084647 -.99996 -1 .00099183 0 0)" x="-106.09" y="-69.132" width="8.5829" height="28.872" rx="0" ry="3.2663" fill="url(#linearGradient1771)" style="paint-order:markers fill stroke"/>
+   <rect transform="matrix(-.015791 -.99988 -1 .00053161 0 0)" x="-102.08" y="-68.418" width="4.6008" height="28.872" rx="0" ry="0" fill="url(#linearGradient1771)" style="paint-order:markers fill stroke"/>
+  </g>
+  <path d="m45.393 109.42h23.266c1.487 0 2.6841-1.4272 2.6841-3.1999v-28.452c-4.0796 5.0767-18.915 22.526-25.95 31.652z" fill="#d75e23" fill-opacity=".19608" style="paint-order:markers fill stroke"/>
+ </g>
+</svg>
