@@ -39,8 +39,7 @@ export class Map extends Component {
     }
 
     eachMarker(event) {
-
-        const center = { lat: event.geolocation.Latitude , lng: -event.geolocation.Longitude }
+        const center = { lat: event.geolocation , lng: -event.geolocation }
 
         return (
             <div>
