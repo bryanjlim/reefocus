@@ -81,3 +81,11 @@
   bottom:0px;
   width:100%;
 }
+
+.coral1{
+  position:absolute;
+  width:15%;
+  height:15%;
+  top:calc(100%);
+  left:10px;
+}
