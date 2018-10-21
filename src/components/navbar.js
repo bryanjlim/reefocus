@@ -34,8 +34,4 @@ export class Navbar extends React.Component {
     }
 }
 
-Navbar.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
-
 export default Navbar;
