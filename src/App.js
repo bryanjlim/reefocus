@@ -3,6 +3,8 @@ import firebase from 'firebase';
 import './App.css';
 import { SignIn } from './components/pages/signIn/signIn';
 import { Home } from './components/pages/home/home';
+import userDataStore from '../stores/userDataStore';
+
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -17,20 +19,89 @@ export class App extends Component {
     };
     firebase.initializeApp(config);
 
-    var user = firebase.auth().currentUser;
-
-    if (user) {
-      this.state = {
-        isSignedIn: true,
-      }
-    } else {
-      this.state = {
-        isSignedIn: false,
-      }
+    this.state = {
+      isSignedIn: false,
     }
 
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.state = {
+          isSignedIn: true,
+        }
+      } else {
+        this.state = {
+          isSignedIn: false,
+        }
+      }
+    });
+
+    this.getCounts = this.getCounts.bind(this);
+    this.updateCounts = this.updateCounts.bind(this);
     this.signIn = this.signIn.bind(this);
     this.googleAuthentication = this.googleAuthentication.bind(this);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          {this.state.isSignedIn ? <Home /> : <SignIn signIn={this.signIn} />}
+        </header>
+      </div>
+    );
+  }
+
+  // Firebase API
+
+  // Populates userDataStore with counts from firebase
+  getCounts() {
+    firebase.firestore().collection("users")
+      .doc(firebase.auth().currentUser.uid)
+      .get()
+      .then((userData) => {
+        userDataStore.bringWaterBottleCount = userData.bringWaterBottleCount;
+        userDataStore.refuseExtraPackagingCount = userData.refuseExtraPackagingCount;
+        userDataStore.bringOwnBagCount = userData.bringOwnBagCount;
+        userDataStore.bringCompostableObjectCount = userData.bringCompostableObjectCount;
+        userDataStore.carpoolCount = userData.carpoolCount;
+        userDataStore.publicTransitCount = userData.publicTransitCount;
+        userDataStore.bikeCount = userData.bikeCount;
+        userDataStore.walkCount = userData.walkCount;
+        userDataStore.events = userData.events;
+      }).catch((e) => {
+        firebase.firestore().collection("users")
+             .doc(firebase.auth().currentUser.uid)
+             .set({
+              bringWaterBottleCount: userDataStore.bringWaterBottleCount,
+              refuseExtraPackagingCount: userDataStore.refuseExtraPackagingCount,
+              bringOwnBagCount: userDataStore.bringOwnBagCount,
+              bringCompostableObjectCount: userDataStore.bringCompostableObjectCount,
+              carpoolCount: userDataStore.carpoolCount,
+              publicTransitCount: userDataStore.publicTransitCount,
+              bikeCount : userDataStore.bikeCount,
+              walkCount : userDataStore.walkCount,
+              events : userDataStore.events,
+          });
+          this.getCounts();
+      });
+  }
+
+  // Make sure to first update userDataStore 
+  // Updates counts in firestore with userDataStore values
+  updateCounts() {
+    firebase.firestore().collection("users")
+             .doc(firebase.auth().currentUser.uid)
+             .set({
+              bringWaterBottleCount: userDataStore.bringWaterBottleCount,
+              refuseExtraPackagingCount: userDataStore.refuseExtraPackagingCount,
+              bringOwnBagCount: userDataStore.bringOwnBagCount,
+              bringCompostableObjectCount: userDataStore.bringCompostableObjectCount,
+              carpoolCount: userDataStore.carpoolCount,
+              publicTransitCount: userDataStore.publicTransitCount,
+              bikeCount : userDataStore.bikeCount,
+              walkCount : userDataStore.walkCount,
+              events : userDataStore.events,
+          });
   }
 
   signIn() {
@@ -63,16 +134,6 @@ export class App extends Component {
         err(errorCode + errorMessage + email + credential);
       });
     });
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          {this.state.isSignedIn ? <Home /> : <SignIn signIn={this.signIn} />}
-        </header>
-      </div>
-    );
   }
 }
 
