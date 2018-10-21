@@ -35,7 +35,7 @@ export class Events extends Component {
 
     completeEvent(eventid, eventtitle) {
         this.props.userData.events.push(eventid);
-        this.props.userData.points += 50;
+        this.props.userData.points += 100;
         this.props.updateFirestore();
         this.forceUpdate();
         this.setState({
