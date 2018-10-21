@@ -130,6 +130,8 @@ export class App extends Component {
           userDataStore.bikeCount = userData.bikeCount;
           userDataStore.walkCount = userData.walkCount;
           userDataStore.events = userData.events;
+
+          this.forceUpdate();
         }
       });
   }

@@ -83,15 +83,16 @@ export class MainMenu extends Component {
             )
         }
         else {
+            // Events page popup
             return (
                 <div>
                  <h1> "No events today. Check back later!" </h1>
                  <img
-                    className = "Minus" 
-                    src = {minusImg}
-                    alt = "Collapse"
-                    onClick = {() => this.setState({current: "default"})}
-                 />
+                    className = "Log" 
+                    src = {logImg}
+                    alt = "Log"
+                    onClick = {() => this.setState({current: "main"})}
+                /> 
             </div>
             )
         }
