@@ -5,13 +5,13 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const styles = theme => ({
     eventCard: {
+        left: 0,
         marginTop: 20,
-        minWidth: 275,
         maxWidth: 575,
     },
     eventCardTitle: {
-        marginBottom: 16,
-        fontSize: 14,
+        fontSize: 16,
+        marginBottom: 5,
     },
     eventCardPos: {
         marginBottom: 12,
@@ -43,32 +43,23 @@ class EventCard extends Component {
 
         return (
             <Card className={classes.eventCard}>
-                <CardHeader
-                    action={
-                        <div>
-                        <IconButton onClick={this.handleMenuOpen}>
-                            <MoreVertIcon/>
-                        </IconButton>
-                            <Menu
-                            anchorEl={anchorEl}
-                            open={Boolean(anchorEl)}
-                            onClose={this.handleMenuClose}
-                            >
-                            <MenuItem onClick={this.handleDelete}>View On Map</MenuItem>
-                        </Menu>
-                        </div>
-                    }
-                    title= {this.props.name}
-                    subheader={this.props.date}
-                />  
                 <CardContent>
+                    <Typography className={classes.eventCardTitle}>
+                        {this.props.name}
+                    </Typography>
+                    <Typography component="p">
+                        <b>When: </b> {this.props.date}
+                    </Typography>
+                    <Typography component="p">
+                        <b>Where: </b> {this.props.location}
+                    </Typography>
                     <Typography component="p">
                         <b>Hosted By: </b> {this.props.organization}
                     </Typography>
                 </CardContent>
                 <CardActions>
                     <Button onClick={() => {this.props.completeEvent(this.props.id, this.props.name)}} size="small">Complete</Button>
-                    <Button href={this.props.url} size="small">View More</Button>
+                    <Button href={this.props.url} size="small">Website</Button>
                 </CardActions>
             </Card>
         );
