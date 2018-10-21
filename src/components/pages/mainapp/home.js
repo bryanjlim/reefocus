@@ -11,13 +11,9 @@ export class Home extends Component {
     }
     render() {
         return (
-            <div className="scrollContain">
-                <div className={this.state.startup ? "mainContainer animate-down" : 
-                    "mainContainer"}>
-                    <h1 className="AppName">Reefocus</h1>
-                    <img className="background" src={Background} />
-                    <img className="coral1" src={FanCoral} />
-                </div>
+            <div className="mainContainer">
+                <img className="background" src={Background} />
+                <img className="coral1" src={FanCoral} />
             </div>
         );
     }

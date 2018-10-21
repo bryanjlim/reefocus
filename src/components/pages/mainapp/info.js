@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-export class Leaderboard extends Component {
+export class Info extends Component {
     render() {
         return (
             <div>
                 <div className="container">
-                    <h1>Leaderboard</h1>
+                    <h1>Info</h1>
                 </div>
             </div>
         );
     }
 }
 
-export default Leaderboard;
+export default Info;

@@ -34,58 +34,38 @@
   0% {
     top: 0%;
   }
-  33%{
-    top:0%;
+  33% {
+    top: 0%;
   }
   100% {
     top: -50%;
   }
 }
-.scrollContain{
-  position:fixed;
-  width:100%;
-  overflow: hidden;
-  height:100%;
 
-}
-.animate-down{
-  animation: App-Scroll-Down;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-}
 .mainContainer {
-  top:-50%;
   position: absolute;
-  overflow: hidden;
   width: 100%;
-  height: 200%;
-  left: 0px;
-
+  height: 100%;
+  overflow: hidden;
 }
+
 .background {
   position: absolute;
-  top: 25%;
-  height: 50%;
+  margin: auto;
+  height: 100%;
   display: block;
-  margin-left: auto;
-  margin-right: auto; 
-}
-.AppName {
-  margin: 20px;
-  top: 150px;
-  text-align: center;
 }
 
-.nav{
-  position:fixed;
-  bottom:0px;
-  width:100%;
+.nav {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
 
-.coral1{
+.coral1 {
   position:absolute;
-  width:15%;
-  height:15%;
-  top:calc(100%);
-  left:10px;
+  width: 25%;
+  height: 25%;
+  top: 50%;
+  left: 50%;
 }
