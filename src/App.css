@@ -153,11 +153,12 @@
 }
 
 .Log {
+  margin-left: -5vh;
   border-radius: 0.5em;
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 85vh;
+  top: 79vh;
 
 }
 
@@ -167,7 +168,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 85vh;
+  top: 79vh;
 
 }
 
@@ -177,7 +178,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 73vh;
+  top: 67vh;
 }
 
 .Knife {
@@ -186,7 +187,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 73vh;
+  top: 67vh;
 }
 
 .Refuse {
@@ -195,7 +196,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 61vh;
+  top: 55vh;
 }
 
 .Bag {
@@ -204,7 +205,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 61vh;
+  top: 55vh;
 }
 
 .Bus {
@@ -213,7 +214,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 73vh;
+  top: 67vh;
 }
 
 .Bike {
@@ -222,7 +223,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 73vh;
+  top: 67vh;
 }
 
 .Carpool {
@@ -231,7 +232,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 61vh;
+  top: 55vh;
 }
 
 .Walk {
@@ -240,7 +241,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 61vh;
+  top: 55vh;
 }
 
 .Plastic {
@@ -249,7 +250,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 49vh;
+  top: 43vh;
 }
 .Transport {
   margin-left: -5vh;
@@ -257,7 +258,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 61vh;
+  top: 55vh;
 }
 .Events {
   margin-left: -5vh;
@@ -265,7 +266,7 @@
   width: 10vh;
   height: 10vh;
   position: absolute;
-  top: 73vh;
+  top: 67vh;
 }
 
 .App-link {
