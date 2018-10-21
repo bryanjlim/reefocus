@@ -6,7 +6,7 @@ import { Home } from './components/pages/mainapp/home';
 import { Leaderboard } from './components/pages/mainapp/leaderboard';
 import { Store } from './components/pages/mainapp/store';
 import { Navbar } from './components/navbar';
-import userDataStore from '../stores/userDataStore';
+import userDataStore from './stores/userDataStore';
 
 export class App extends Component {
   constructor(props) {
