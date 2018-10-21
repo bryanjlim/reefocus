@@ -36,6 +36,8 @@ export class App extends Component {
   signIn() {
     this.googleAuthentication().then(() => {
       this.setState({ isSignedIn: true });
+    }).catch((e) =>{
+      console.log("error: " + e);
     });
   }
 
