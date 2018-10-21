@@ -1,6 +1,8 @@
 import { observable, decorate } from 'mobx';
 
 class UserDataStore {
+    points = 0;
+
     bringWaterBottleCount = 0;
     refuseExtraPackagingCount = 0;
     bringOwnBagCount = 0;

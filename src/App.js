@@ -30,6 +30,7 @@ export class App extends Component {
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
+        this.getCounts();
         this.setState({
           isLoading: false,
           isSignedIn: true,
@@ -91,53 +92,69 @@ export class App extends Component {
 
   // Populates userDataStore with counts from firebase
   getCounts() {
-    firebase.firestore().collection("users")
+    const firestore = firebase.firestore();
+    const settings = {/* your settings... */ timestampsInSnapshots: true};
+    firestore.settings(settings);
+
+    firestore.collection("users")
       .doc(firebase.auth().currentUser.uid)
       .get()
-      .then((userData) => {
-        userDataStore.bringWaterBottleCount = userData.bringWaterBottleCount;
-        userDataStore.refuseExtraPackagingCount = userData.refuseExtraPackagingCount;
-        userDataStore.bringOwnBagCount = userData.bringOwnBagCount;
-        userDataStore.bringCompostableObjectCount = userData.bringCompostableObjectCount;
-        userDataStore.carpoolCount = userData.carpoolCount;
-        userDataStore.publicTransitCount = userData.publicTransitCount;
-        userDataStore.bikeCount = userData.bikeCount;
-        userDataStore.walkCount = userData.walkCount;
-        userDataStore.events = userData.events;
-      }).catch((e) => {
-        firebase.firestore().collection("users")
-          .doc(firebase.auth().currentUser.uid)
-          .set({
-            bringWaterBottleCount: userDataStore.bringWaterBottleCount,
-            refuseExtraPackagingCount: userDataStore.refuseExtraPackagingCount,
-            bringOwnBagCount: userDataStore.bringOwnBagCount,
-            bringCompostableObjectCount: userDataStore.bringCompostableObjectCount,
-            carpoolCount: userDataStore.carpoolCount,
-            publicTransitCount: userDataStore.publicTransitCount,
-            bikeCount: userDataStore.bikeCount,
-            walkCount: userDataStore.walkCount,
-            events: userDataStore.events,
+      .then((res) => {
+        const userData = res.data();
+        if(typeof userData == "undefined") {
+          // If there is no data for user, set data using default values from userDataStore
+          firestore.collection("users")
+             .doc(firebase.auth().currentUser.uid)
+             .set({
+              points: userDataStore.points,
+              bringWaterBottleCount: userDataStore.bringWaterBottleCount,
+              refuseExtraPackagingCount: userDataStore.refuseExtraPackagingCount,
+              bringOwnBagCount: userDataStore.bringOwnBagCount,
+              bringCompostableObjectCount: userDataStore.bringCompostableObjectCount,
+              carpoolCount: userDataStore.carpoolCount,
+              publicTransitCount: userDataStore.publicTransitCount,
+              bikeCount : userDataStore.bikeCount,
+              walkCount : userDataStore.walkCount,
+              events : userDataStore.events,
           });
-        this.getCounts();
+          this.getCounts();
+        } else {
+          // Set userDataStore with data from firestore
+          userDataStore.points = userData.points;
+          userDataStore.bringWaterBottleCount = userData.bringWaterBottleCount;
+          userDataStore.refuseExtraPackagingCount = userData.refuseExtraPackagingCount;
+          userDataStore.bringOwnBagCount = userData.bringOwnBagCount;
+          userDataStore.bringCompostableObjectCount = userData.bringCompostableObjectCount;
+          userDataStore.carpoolCount = userData.carpoolCount;
+          userDataStore.publicTransitCount = userData.publicTransitCount;
+          userDataStore.bikeCount = userData.bikeCount;
+          userDataStore.walkCount = userData.walkCount;
+          userDataStore.events = userData.events;
+        }
       });
   }
 
   // Make sure to first update userDataStore 
   // Updates counts in firestore with userDataStore values
   updateCounts() {
-    firebase.firestore().collection("users")
-      .doc(firebase.auth().currentUser.uid)
-      .set({
-        bringWaterBottleCount: userDataStore.bringWaterBottleCount,
-        refuseExtraPackagingCount: userDataStore.refuseExtraPackagingCount,
-        bringOwnBagCount: userDataStore.bringOwnBagCount,
-        bringCompostableObjectCount: userDataStore.bringCompostableObjectCount,
-        carpoolCount: userDataStore.carpoolCount,
-        publicTransitCount: userDataStore.publicTransitCount,
-        bikeCount: userDataStore.bikeCount,
-        walkCount: userDataStore.walkCount,
-        events: userDataStore.events,
-      });
+    const firestore = firebase.firestore();
+    const settings = {/* your settings... */ timestampsInSnapshots: true};
+    firestore.settings(settings);
+
+    firestore.collection("users")
+             .doc(firebase.auth().currentUser.uid)
+             .set({
+              points: userDataStore.points,
+              bringWaterBottleCount: userDataStore.bringWaterBottleCount,
+              refuseExtraPackagingCount: userDataStore.refuseExtraPackagingCount,
+              bringOwnBagCount: userDataStore.bringOwnBagCount,
+              bringCompostableObjectCount: userDataStore.bringCompostableObjectCount,
+              carpoolCount: userDataStore.carpoolCount,
+              publicTransitCount: userDataStore.publicTransitCount,
+              bikeCount : userDataStore.bikeCount,
+              walkCount : userDataStore.walkCount,
+              events : userDataStore.events,
+          });
   }
 
   signIn() {
