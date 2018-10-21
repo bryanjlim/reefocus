@@ -22,8 +22,6 @@ export class Navbar extends React.Component {
         const { value } = this.state;
         return (
             <div>
-               
-
                 <BottomNavigation
                     value={value}
                     onChange={this.handleChange}
@@ -33,7 +31,10 @@ export class Navbar extends React.Component {
                     <BottomNavigationAction icon={<Home />} value="/" label="Reef" component={Link} to="/" />
                     <BottomNavigationAction icon={<ShoppingCart />} value="/store" label="Shop" component={Link} to="/store" />
                 </BottomNavigation>
-                <MainMenu userData={this.props.userData} updateFirestore={this.props.updateFirestore}/>
+
+                {this.state.value == "/" ? < MainMenu userData={this.props.userData} updateFirestore={this.props.updateFirestore}/> : null}
+
+                
             </div>
         );
     }
