@@ -61,12 +61,52 @@
   bottom: 0px;
   width: 100%;
 }
-
-.coral1 {
-  position:absolute;
-  width: 25%;
-  height: 25%;
+.braincoral{
+  position: absolute;
+  width: 30%;
+  height: 30%;
   top: 75%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+.coral1 {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  top: 55%;
+  left: 25%;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+.starfish {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 65%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+.seasponge{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 80%;
   left: 15%;
+  transform: translate(-50%, -50%);
+}
+.coral2 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 65%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+
+.seaweed{
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 85%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
