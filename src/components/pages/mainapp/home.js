@@ -6,7 +6,7 @@ import Starfish from '../../../graphics/starfish 1.1.svg';
 import BrainCoral from '../../../graphics/brain coral 0.2.svg';
 import SeaSponge from '../../../graphics/seasponge 0.1.svg';
 import Seaweed from '../../../graphics/seaweed 0.1.svg';
-
+import SnackbarMaker from '../../snackbar.js'
 export class Home extends Component {
     constructor(props) {
         super(props);
@@ -19,10 +19,19 @@ export class Home extends Component {
         return (
             <div className="mainContainer">
                 <img className="background" src={Background} />
-                <img className="braincoral" src={BrainCoral} />
-                <img className="starfish" src={Starfish} />
-                <img className="coral1" src={PinkCoral} />
-                <img className="coral2" src={FanCoral} />
+                {(this.props.userDataStore.points > 100) ?
+                    <div>
+                        <img className="braincoral" src={BrainCoral} />
+                        <img className="starfish" src={Starfish} />
+                    </div> : null
+                }
+                {(this.props.userDataStore.points > 200) ?
+                    <div>
+                        <img className="coral1" src={PinkCoral} />
+                        <img className="coral2" src={FanCoral} />
+                    </div> : null
+                }
+
                 <img className="seasponge" src={SeaSponge} />
                 <img className="seaweed" src={Seaweed} />
             </div>

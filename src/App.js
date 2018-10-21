@@ -67,7 +67,7 @@ export class App extends Component {
         
           <header className="App-header">
             {
-              (this.props.location.pathname == "/") ? <Home startup={this.state.startup} isDone={this.animationCompleted} /> :
+              (this.props.location.pathname == "/") ? <Home startup={this.state.startup} isDone={this.animationCompleted} userDataStore={userDataStore}/> :
                 (this.props.location.pathname == "/info") ? <Info userData={userDataStore}/> :
                   (this.props.location.pathname == "/store") ? <Store /> : null
             }
