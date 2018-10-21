@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import './App.css';
 import { SignIn } from './components/pages/signIn/signIn';
-import { Home } from './components/pages/home/home';
+import { Home } from './components/pages/mainapp/home';
+import { Leaderboard } from './components/pages/mainapp/leaderboard';
+import { Store } from './components/pages/mainapp/store';
+import { Navbar } from './components/navbar';
 import userDataStore from '../stores/userDataStore';
 
 export class App extends Component {
@@ -42,13 +45,28 @@ export class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          {this.state.isSignedIn ? <Home /> : <SignIn signIn={this.signIn} />}
-        </header>
-      </div>
-    );
+    if (this.state.isSignedIn) {
+      return (
+        <div className="App">
+          <header className="App-header">
+            {
+              (this.props.location.pathname == "/") ? <Home /> :
+                (this.props.location.pathname == "/leaderboard") ? <Leaderboard /> :
+                  (this.props.location.pathname == "/store") ? <Store /> : null
+            }
+            <Navbar location={this.props.location.pathname}/>
+          </header>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <SignIn signIn={this.signIn} />
+          </header>
+        </div>
+      )
+    }
   }
 
   // Firebase API
@@ -107,7 +125,7 @@ export class App extends Component {
   signIn() {
     this.googleAuthentication().then(() => {
       this.setState({ isSignedIn: true });
-    }).catch((e) =>{
+    }).catch((e) => {
       console.log("error: " + e);
     });
   }
@@ -116,14 +134,14 @@ export class App extends Component {
     const provider = new firebase.auth.GoogleAuthProvider();
 
     return new Promise((res, err) => {
-      firebase.auth().signInWithPopup(provider).then(function(result) {
+      firebase.auth().signInWithPopup(provider).then(function (result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const token = result.credential.accessToken;
         // The signed-in user info.
         const user = result.user;
         // ...
         res();
-      }).catch(function(error) {
+      }).catch(function (error) {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;

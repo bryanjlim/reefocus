@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Background from '../../../../public/graphics/reefocus background 1.2.svg';
+import Background from '../../../graphics/reefocus background 1.2.svg';
 export class Home extends Component {
     render() {
         return (
             <div>
-                <div className="container">
+                <div className="mainContainer">
                     <h1 className="AppName">Reefocus</h1>
-                    <img src={Background}></img>
+                    <img className="background" src={Background}></img>
                 </div>
             </div>
         );
