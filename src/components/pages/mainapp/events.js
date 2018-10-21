@@ -79,6 +79,7 @@ export class Events extends Component {
                     completeEvent={(id, title) => {this.completeEvent(id, title)}}
                     name={event.name}
                     organization={event.organization}
+                    location={event.location}
                     date={event.date}
                     url={event.url}
                     id={event.id}
