@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import BagImg from "./Bag.svg";
-import CupImg from "./Bottle.svg";
-import KnifeImg from "./Knife.svg";
-import RefuseImg from "./Refuse.svg";
+import BagImg from "../../graphics/icon_bag.svg";
+import CupImg from "../../graphics/icon_bottle.svg";
+import KnifeImg from "../../graphics/icon_fork.svg";
+import RefuseImg from "../../graphics/icon_packaging.svg";
 
 function alertDecision(action, points) {
     alert(action + ": +" + points);

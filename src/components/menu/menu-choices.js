@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-import transportImg from "./Transport.svg"
-import plasticImg from "./Plastic.svg"
-import eventImg from "./Events.svg"
+import transportImg from "../../graphics/icon_transportation.svg"
+import plasticImg from "../../graphics/icon_actions.svg"
+import eventImg from "../../graphics/icon_events.svg"
 import PlasticMenu from "./PlasticMenu.js"
 import TransportMenu from "./transport-menu"
-import logImg from "./Log.svg"
-import minusImg from "./Minus.svg"
+import logImg from "../../graphics/icon_plus.svg"
+import minusImg from "../../graphics/icon_minus.svg"
 
 
 export class MainMenu extends Component {

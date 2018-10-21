@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import WalkImg from "./Walk.svg";
-import CarpoolImg from "./Carpool.svg";
-import BusImg from "./Bus.svg";
-import BikeImg from "./Bike.svg";
+import WalkImg from "../../graphics/icon_walk.svg";
+import CarpoolImg from "../../graphics/icon_carpool.svg";
+import BusImg from "../../graphics/icon_transit.svg";
+import BikeImg from "../../graphics/icon_bike.svg";
 
 function alertDecision(action, points) {
     alert(action + ": +" + points);

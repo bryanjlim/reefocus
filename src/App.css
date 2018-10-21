@@ -132,3 +132,151 @@
   transform: translate(-50%, -50%);
 }
 
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Log {
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 85vh;
+
+}
+
+.Minus {
+  margin-left: -5vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 85vh;
+
+}
+
+.Cup {
+  margin-left: -11vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 73vh;
+}
+
+.Knife {
+  margin-left: 1vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 73vh;
+}
+
+.Refuse {
+  margin-left: -11vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 61vh;
+}
+
+.Bag {
+  margin-left: 1vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 61vh;
+}
+
+.Bus {
+  margin-left: -11vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 73vh;
+}
+
+.Bike {
+  margin-left: 1vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 73vh;
+}
+
+.Carpool {
+  margin-left: -11vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 61vh;
+}
+
+.Walk {
+  margin-left: 1vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 61vh;
+}
+
+.Plastic {
+  margin-left: -5vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 49vh;
+}
+.Transport {
+  margin-left: -5vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 61vh;
+}
+.Events {
+  margin-left: -5vh;
+  border-radius: 0.5em;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  top: 73vh;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
