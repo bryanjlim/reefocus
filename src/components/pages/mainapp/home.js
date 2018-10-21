@@ -6,6 +6,8 @@ import Starfish from '../../../graphics/starfish 1.1.svg';
 import BrainCoral from '../../../graphics/brain coral 0.2.svg';
 import SeaSponge from '../../../graphics/seasponge 0.1.svg';
 import Seaweed from '../../../graphics/seaweed 0.1.svg';
+import Fish from '../../../graphics/Fish/yellowtang.svg';
+import Fish2 from '../../../graphics/Fish/clownfish.svg';
 export class Home extends Component {
     constructor(props) {
         super(props);
@@ -28,9 +30,10 @@ export class Home extends Component {
                     <div>
                         <img className="coral1" src={PinkCoral} />
                         <img className="coral2" src={FanCoral} />
+                        <img className="fish2" src={Fish2} />
                     </div> : null
                 }
-
+                <img className="fish" src={Fish} />
                 <img className="seasponge" src={SeaSponge} />
                 <img className="seaweed" src={Seaweed} />
             </div>
