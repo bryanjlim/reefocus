@@ -41,6 +41,28 @@
   }
 }
 
+.signInLogo {
+  text-align:center;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.signInLogoText {
+    margin-bottom: 50px;
+}
+
+.signInButton {
+  text-align:center;
+  display: block;
+  cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+
 .mainContainer {
   position: absolute;
   width: 100%;

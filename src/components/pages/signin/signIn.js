@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import '../../../App.css'
+
+
 export class SignIn extends Component {
     render(){
         return(
             <div>
-                <h1>Sign In</h1>
-                <button onClick={this.props.signIn}>Sign In</button>
+                <img className="signInLogo" src={require('../../../graphics/ReefocusLogo.svg')} />
+                <h4 className="signInLogoText">Reefocus - Gamifying an Eco-friendly Lifestyle</h4>
+                <img onClick={this.props.signIn} className="signInButton" src={require('../../../graphics/signInButton.png')} />
             </div>
         );      
     }
