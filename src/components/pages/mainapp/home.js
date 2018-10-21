@@ -8,6 +8,7 @@ import SeaSponge from '../../../graphics/seasponge 0.1.svg';
 import Seaweed from '../../../graphics/seaweed 0.1.svg';
 import Fish from '../../../graphics/Fish/yellowtang.svg';
 import Fish2 from '../../../graphics/Fish/clownfish.svg';
+import Fish3 from '../../../graphics/Fish/lyretail_anthias.svg';
 export class Home extends Component {
     constructor(props) {
         super(props);
@@ -20,12 +21,7 @@ export class Home extends Component {
         return (
             <div className="mainContainer">
                 <img className="background" src={Background} />
-                {(this.props.userDataStore.points > 100) ?
-                    <div>
-                        <img className="braincoral" src={BrainCoral} />
-                        <img className="starfish" src={Starfish} />
-                    </div> : null
-                }
+
                 {(this.props.userDataStore.points > 200) ?
                     <div>
                         <img className="coral1" src={PinkCoral} />
@@ -33,8 +29,16 @@ export class Home extends Component {
                         <img className="fish2" src={Fish2} />
                     </div> : null
                 }
+                {(this.props.userDataStore.points > 100) ?
+                    <div>
+                        <img className="seasponge" src={SeaSponge} />
+                        <img className="starfish" src={Starfish} />
+                    </div> : null
+                }
+
                 <img className="fish" src={Fish} />
-                <img className="seasponge" src={SeaSponge} />
+
+                <img className="braincoral" src={BrainCoral} />
                 <img className="seaweed" src={Seaweed} />
             </div>
         );

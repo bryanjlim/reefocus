@@ -52,6 +52,7 @@
 .background {
   position: absolute;
   left: 0;
+  top:-4em;
   margin: auto;
   height: 125%;
   display: block;
@@ -67,7 +68,7 @@
   width: 30%;
   height: 30%;
   top: 85%;
-  left: 35%;
+  left: 25%;
   transform: translate(-50%, -50%);
 }
 .coral1 {
@@ -82,8 +83,8 @@
   position: absolute;
   width: 70%;
   height: 70%;
-  top: 65%;
-  left: 65%;
+  top: 70%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
 
@@ -111,7 +112,7 @@
   position: absolute;
   width: 50%;
   height: 50%;
-  top: 80%;
+  top: 78%;
   left: 15%;
   transform: translate(-50%, -50%);
 }
@@ -129,7 +130,7 @@
   width: 70%;
   height: 70%;
   top: 80%;
-  left: 75%;
+  left: 90%;
   transform: translate(-50%, -50%);
 }
 
