@@ -11,7 +11,7 @@ export class Navbar extends React.Component {
         super(props);
         this.state = {
             value: props.location,
-
+            
         };
     }
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="36.62mm" height="36.02mm" version="1.1" viewBox="0 0 36.62 36.02" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(4.2161 -12.421)">
+  <g>
+   <rect x="-4.2161" y="11.821" width="36.62" height="36.62" ry="0" fill="#de5533" style="paint-order:stroke fill markers"/>
+   <rect x="1.9492" y="30.981" width="19.457" height="11.599" rx="0" ry="0" fill="#f5f0e7" stroke="#f5f0e7" stroke-linecap="square" style="paint-order:stroke fill markers"/>
+   <rect transform="matrix(.92878 -.37063 0 1 0 0)" x="23.801" y="39.531" width="7.4248" height="11.994" rx="0" ry="0" fill="#eae1ce" stroke="#eae1ce" stroke-linecap="square" stroke-width=".62815" style="paint-order:stroke fill markers"/>
+  </g>
+  <g stroke-linecap="square" stroke-width=".48997">
+   <path d="m8.5398 27.64h20.672l-7.041 2.7917h-20.672z" fill="none" stroke="#f5f0e7" style="paint-order:stroke fill markers"/>
+   <path d="m0.6012 18.209h20.672l7.5111 9.0755h-20.672z" fill="none" stroke="#f5f0e7" style="paint-order:stroke fill markers"/>
+   <path d="m0.10628 18.315h20.672l-1.703 2.9951h-20.672z" fill="#f4eee4" stroke="#f4eee4" style="paint-order:stroke fill markers"/>
+  </g>
+  <path d="m-0.58355 45.119h27.207c1.7389 0 3.1389-1.2964 3.1389-2.9067v-25.845c-4.7708 4.6116-22.119 20.463-30.346 28.752z" fill="#de5533" fill-opacity=".19608" style="paint-order:markers fill stroke"/>
+ </g>
+</svg>

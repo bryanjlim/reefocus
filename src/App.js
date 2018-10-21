@@ -25,6 +25,7 @@ export class App extends Component {
     this.state = {
       isLoading: true,
       isSignedIn: false,
+      startup: true,
     }
 
     firebase.auth().onAuthStateChanged((user) => {
@@ -46,11 +47,18 @@ export class App extends Component {
     this.updateCounts = this.updateCounts.bind(this);
     this.signIn = this.signIn.bind(this);
     this.googleAuthentication = this.googleAuthentication.bind(this);
+    this.animationCompleted = this.animationCompleted.bind(this);
+  }
+
+  animationCompleted() {
+    this.setState({
+      startup: false
+    })
   }
 
   render() {
     if (this.state.isLoading) {
-      return(<div className="App"><div></div></div>);
+      return (<div className="App"><div></div></div>);
     }
 
     if (this.state.isSignedIn) {
@@ -58,11 +66,11 @@ export class App extends Component {
         <div className="App">
           <header className="App-header">
             {
-              (this.props.location.pathname == "/") ? <Home /> :
+              (this.props.location.pathname == "/") ? <Home startup={this.state.startup} isDone={this.animationCompleted} /> :
                 (this.props.location.pathname == "/leaderboard") ? <Leaderboard /> :
                   (this.props.location.pathname == "/store") ? <Store /> : null
             }
-            <Navbar location={this.props.location.pathname}/>
+            <Navbar location={this.props.location.pathname} />
           </header>
         </div>
       );
