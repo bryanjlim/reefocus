@@ -4,7 +4,7 @@ import './App.css';
 import { SignIn } from './components/pages/signIn/signIn';
 import { Home } from './components/pages/mainapp/home';
 import { Info } from './components/pages/mainapp/info';
-import { Store } from './components/pages/mainapp/store';
+import { Map } from './components/pages/mainapp/map';
 import { Navbar } from './components/navbar';
 import userDataStore from './stores/userDataStore';
 
@@ -69,7 +69,7 @@ export class App extends Component {
             {
               (this.props.location.pathname == "/") ? <Home startup={this.state.startup} isDone={this.animationCompleted} userDataStore={userDataStore}/> :
                 (this.props.location.pathname == "/info") ? <Info userData={userDataStore}/> :
-                  (this.props.location.pathname == "/store") ? <Store /> : null
+                  (this.props.location.pathname == "/map") ? <Map /> : null
             }
            
           </header>
