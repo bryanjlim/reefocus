@@ -3,7 +3,7 @@ import firebase from 'firebase';
 import './App.css';
 import { SignIn } from './components/pages/signIn/signIn';
 import { Home } from './components/pages/mainapp/home';
-import { Leaderboard } from './components/pages/mainapp/leaderboard';
+import { Info } from './components/pages/mainapp/info';
 import { Store } from './components/pages/mainapp/store';
 import { Navbar } from './components/navbar';
 import userDataStore from './stores/userDataStore';
@@ -67,13 +67,13 @@ export class App extends Component {
         
           <header className="App-header">
             {
-              (this.props.location.pathname == "/") ? <Home startup={this.state.startup} isDone={this.animationCompleted} /> :
-                (this.props.location.pathname == "/leaderboard") ? <Leaderboard /> :
+              (this.props.location.pathname == "/") ? <Home startup={this.state.startup} isDone={this.animationCompleted} userDataStore={userDataStore}/> :
+                (this.props.location.pathname == "/info") ? <Info userData={userDataStore}/> :
                   (this.props.location.pathname == "/store") ? <Store /> : null
             }
            
           </header>
-          <Navbar location={this.props.location.pathname} />
+          <Navbar location={this.props.location.pathname} userData={userDataStore} updateFirestore={this.updateCounts}/>
         </div>
         
       );
