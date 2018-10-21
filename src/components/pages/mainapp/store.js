@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-
-export class Home extends Component {
+export class Store extends Component {
     render() {
         return (
             <div>
                 <div className="container">
-                    <h1 className="AppName">Reefocus</h1>
-                    
+                    <h1>Store</h1>
                 </div>
             </div>
         );
     }
 }
 
-export default Home;
+export default Store;

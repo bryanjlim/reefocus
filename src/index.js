@@ -10,6 +10,8 @@ ReactDOM.render(
     <Router>
         <Switch>
             <Route exact path="/" component={App} />
+            <Route path="/leaderboard" component={App} />
+            <Route path="/store" component={App} />
             <Route path="*" component={NotFound404} />
         </Switch>
     </Router>, document.getElementById('root')
