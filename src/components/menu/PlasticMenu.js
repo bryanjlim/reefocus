@@ -4,6 +4,7 @@ import CupImg from "../../graphics/icon_bottle.svg";
 import KnifeImg from "../../graphics/icon_fork.svg";
 import RefuseImg from "../../graphics/icon_packaging.svg";
 import SnackBarMaker from '../snackbar';
+import Fade from '@material-ui/core/Fade'
 
 export class PlasticMenu extends Component {
     constructor(props) {
@@ -88,7 +89,8 @@ export class PlasticMenu extends Component {
     }
 
     render() {
-        return (
+        return (      
+            <Fade in={true}>
             <div className = "PlasticMenu">
                 <img className = "Bag"
                     src = {BagImg}
@@ -114,7 +116,7 @@ export class PlasticMenu extends Component {
 
                 {this.state.showSnackbar ? <SnackBarMaker open={this.state.showSnackbar} message={this.state.message} close={this.close}/> : null}
             </div>
-
+            </Fade>
         )
     }
 }

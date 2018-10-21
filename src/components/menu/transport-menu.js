@@ -4,6 +4,7 @@ import CarpoolImg from "../../graphics/icon_carpool.svg";
 import BusImg from "../../graphics/icon_transit.svg";
 import BikeImg from "../../graphics/icon_bike.svg";
 import SnackBarMaker from '../snackbar';
+import Fade from '@material-ui/core/Fade'
 
 function alertDecision(action, points) {
     alert(action + ": +" + points);
@@ -94,7 +95,9 @@ export class TransportMenu extends Component {
     }
 
     render() {
+        
         return (
+            <Fade in={true}>
             <div className = "PlasticMenu">
                 <img className = "Walk"
                     src = {WalkImg}
@@ -118,9 +121,8 @@ export class TransportMenu extends Component {
                 />
 
                 {this.state.showSnackbar ? <SnackBarMaker open={this.state.showSnackbar} message={this.state.message} close={this.close}/> : null}
-
             </div>
-
+            </Fade>
         )
     }
 }
