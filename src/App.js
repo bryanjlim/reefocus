@@ -7,10 +7,6 @@ export class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isSignedIn: false,
-    }
-
     const config = {
       apiKey: "AIzaSyDG6I5-16WszdcXaLgb3IGTBab1zJmbFCU",
       authDomain: "reefocus-app.firebaseapp.com",
@@ -21,39 +17,59 @@ export class App extends Component {
     };
     firebase.initializeApp(config);
 
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+      this.state = {
+        isSignedIn: true,
+      }
+    } else {
+      this.state = {
+        isSignedIn: false,
+      }
+    }
+
     this.signIn = this.signIn.bind(this);
+    this.googleAuthentication = this.googleAuthentication.bind(this);
   }
 
   signIn() {
+    this.googleAuthentication().then(() => {
+      this.setState({ isSignedIn: true });
+    });
+  }
+
+  googleAuthentication() {
     const provider = new firebase.auth.GoogleAuthProvider();
 
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const token = result.credential.accessToken;
-      // The signed-in user info.
-      const user = result.user;
-      // ...
-    }).catch(function(error) {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      const credential = error.credential;
-      
-      console.log(errorCode + errorMessage + email + credential);
-
-      this.setState({isSignedIn: true});
+    return new Promise((res, err) => {
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const token = result.credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // ...
+        res();
+      }).catch(function(error) {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert("error: " + errorMessage);
+        // The email of the user's account used.
+        const email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        const credential = error.credential;
+        err(errorCode + errorMessage + email + credential);
+      });
     });
   }
 
   render() {
+    alert("rendering: " + this.state.isSignedIn);
     return (
       <div className="App">
         <header className="App-header">
           {this.state.isSignedIn ? <h1>Your Are Signed In</h1> : <SignIn signIn={this.signIn}/>}
-          
         </header>
       </div>
     );
