@@ -17,6 +17,14 @@
   color: white;
 }
 
+.circle-marker{
+  height:25px;
+  width:25px;
+  background-color: #282c34;
+  border-radius: 50%;
+  position: absolute;
+}
+
 .App-link {
   color: #61dafb;
 }
