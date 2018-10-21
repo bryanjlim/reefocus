@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import './App.css';
-import {SignIn} from './components/pages/signIn/signIn'; 
-
+import { SignIn } from './components/pages/signIn/signIn';
+import { Home } from './components/pages/home/home';
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -54,7 +54,6 @@ export class App extends Component {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert("error: " + errorMessage);
         // The email of the user's account used.
         const email = error.email;
         // The firebase.auth.AuthCredential type that was used.
@@ -65,11 +64,10 @@ export class App extends Component {
   }
 
   render() {
-    alert("rendering: " + this.state.isSignedIn);
     return (
       <div className="App">
         <header className="App-header">
-          {this.state.isSignedIn ? <h1>Your Are Signed In</h1> : <SignIn signIn={this.signIn}/>}
+          {this.state.isSignedIn ? <Home /> : <SignIn signIn={this.signIn} />}
         </header>
       </div>
     );
