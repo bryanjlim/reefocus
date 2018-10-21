@@ -31,7 +31,11 @@
   }
 }
 @keyframes App-Scroll-Down{
-  
+  from{
+    top:0px;
+  } to{
+    top:-50%;
+  }
 }
 .container{
   position: absolute;
@@ -40,7 +44,8 @@
   left:0px;
   animation:App-Scroll-Down;
   animation-delay: 1s;
-
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 .AppName{
   margin:20px;
