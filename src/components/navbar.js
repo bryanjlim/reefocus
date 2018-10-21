@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-
+import BottomNavigation from "@material-ui/core/BottomNavigation"
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction"
+import { Home, Equalizer, ShoppingCart } from '@material-ui/icons'
 
 export class Navbar extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
             value: props.location,
-            
+
         };
     }
 
@@ -21,25 +21,15 @@ export class Navbar extends React.Component {
 
     render() {
         const { value } = this.state;
-
         return (
-            <Tabs value={value} onChange={this.handleChange} class="navbar">
-                <Tab value="/leaderboard"
-                    label="Leaderboard"
-                    className="navTab"
-                    component={Link}
-                    to="/leaderboard" />
-                <Tab value="/"
-                    label="Reef"
-                    className="navTab"
-                    component={Link}
-                    to="/" />
-                <Tab value="/store"
-                    label="Store"
-                    className="navTab"
-                    component={Link}
-                    to="/store" />
-            </Tabs>
+            <BottomNavigation
+                value={value}
+                onChange={this.handleChange}
+                className="nav primary">
+                <BottomNavigationAction icon={<Equalizer />} value="/leaderboard" label="Leaderboard" component={Link} to="/leaderboard" />
+                <BottomNavigationAction icon={<Home />} value="/" label="Reef" component={Link} to="/" />
+                <BottomNavigationAction icon={<ShoppingCart />} value="/store" label="Shop" component={Link} to="/store" />
+            </BottomNavigation>
         );
     }
 }

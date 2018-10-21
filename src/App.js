@@ -63,15 +63,18 @@ export class App extends Component {
     if (this.state.isSignedIn) {
       return (
         <div className="App">
+        
           <header className="App-header">
             {
               (this.props.location.pathname == "/") ? <Home startup={this.state.startup} isDone={this.animationCompleted} /> :
                 (this.props.location.pathname == "/leaderboard") ? <Leaderboard /> :
                   (this.props.location.pathname == "/store") ? <Store /> : null
             }
-            <Navbar location={this.props.location.pathname} />
+           
           </header>
+          <Navbar location={this.props.location.pathname} />
         </div>
+        
       );
     } else {
       return (
