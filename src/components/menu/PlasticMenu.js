@@ -18,6 +18,13 @@ export class PlasticMenu extends Component {
         this.refuseExtraPackaging = this.refuseExtraPackaging.bind(this);
         this.bringOwnBag = this.bringOwnBag.bind(this);
         this.bringCompostableObject = this.bringCompostableObject.bind(this);
+        this.close = this.close.bind(this);
+    }
+
+    close() {
+        this.setState({
+            showSnackbar: false,
+        });
     }
 
     bringOwnBottle() {
@@ -105,7 +112,7 @@ export class PlasticMenu extends Component {
                     onClick = {() => this.refuseExtraPackaging()}
                 />
 
-                {this.state.showSnackbar ? <SnackBarMaker open={this.state.showSnackbar} message={this.state.message} /> : null}
+                {this.state.showSnackbar ? <SnackBarMaker open={this.state.showSnackbar} message={this.state.message} close={this.close}/> : null}
             </div>
 
         )
