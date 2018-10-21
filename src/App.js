@@ -23,18 +23,21 @@ export class App extends Component {
     firebase.initializeApp(config);
 
     this.state = {
+      isLoading: true,
       isSignedIn: false,
     }
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.state = {
+        this.setState({
+          isLoading: false,
           isSignedIn: true,
-        }
+        });
       } else {
-        this.state = {
+        this.setState({
+          isLoading: false,
           isSignedIn: false,
-        }
+        });
       }
     });
 
@@ -45,6 +48,10 @@ export class App extends Component {
   }
 
   render() {
+    if (this.state.isLoading) {
+      return(<div className="App"><div></div></div>);
+    }
+
     if (this.state.isSignedIn) {
       return (
         <div className="App">
